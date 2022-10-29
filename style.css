@@ -1,0 +1,159 @@
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: rgb(175,103,233);
+    background: linear-gradient(175deg, rgba(175,103,233,1) 0%, rgba(101,101,231,1) 100%);
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.background-container{
+    width: 388px;
+    height: 100%;
+}
+main{
+    background-color: white;
+    width: 920px;
+    height: 510px;
+    margin: auto;
+    border-radius: 2rem;
+    position: relative;
+    display: flex;
+}
+.image-container{
+    width: 388px;
+    height: 100%;
+    background-image: url(./faq-accordion-card-main/images/illustration-woman-online-desktop.svg);
+    background-size: 388px 360px;
+    background-repeat: no-repeat;
+    background-position: -51px 71px;
+    position: relative;
+    z-index: 1;
+}
+.image-container::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(./faq-accordion-card-main/images/bg-pattern-desktop.svg);
+    background-size: 124% 102%;
+    background-position: -6em 1em;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+}
+.box{
+    position: absolute;
+    top: 45%;
+    z-index: 1;
+    left: -14%;
+}
+.content-container{
+    margin-left: 90px;
+    margin-top: 22px;
+}
+.question-container{
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.question-container p {
+    color: grey;
+    width: 350px;
+    font-size: 13px;
+    display: none;
+}
+.question-container h2{
+    font-size: 1rem;
+    color: grey;
+    font-weight: 500;
+    position: relative;
+}
+.question-container > span {
+    display: block;
+    background: #d7d2d2;
+    width: 350px;
+    height: 1px;
+}
+h2.active-q{
+    color: black;
+    font-weight: bold;
+}
+.question-container h2 span {
+    position: absolute;
+    top: 0;
+    left: 95%;
+    cursor: pointer;
+}
+.question-container h2 span img {
+    width: 1em;
+}
+div.active-q h2 {
+    color: black;
+    font-weight: bold;
+}
+div.active-q h2 span{
+    transform: rotate(180deg);
+}
+div.active-q p {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    main {
+        background-color: white;
+        width: 920px;
+        height: 510px;
+        margin: auto;
+        border-radius: 2rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 563px;
+        width: 327px;
+        margin: auto;
+    }
+    .image-container {
+        background-image: url(./faq-accordion-card-main/images/illustration-woman-online-mobile.svg);
+        width: 78%;
+        height: 27em;
+        background-size: contain;
+        position: absolute;
+        top: -259px;
+        left: 41px;
+        background-position: 0em;
+    }
+    .box{
+        display: none;
+    }
+    .image-container::before{
+        display: none;
+    }
+    .content-container {
+        margin-left: 25px;
+    }
+    .question-container > span {
+     width: 290px; 
+    }
+    .question-container h2 {
+        font-size: .9rem;
+
+    }
+    .question-container p {
+        width: 279px;
+    }
+    .question-container h2 span {
+        position: absolute;
+        top: 0;
+        left: 90%;
+        cursor: pointer;
+    }
+    main {
+       border-radius: 1rem;
+    }
+    .background-container {
+        height: 48px;
+    }
+    h1{
+        text-align: center;
+    }
+}
+
